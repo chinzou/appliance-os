@@ -16,7 +16,7 @@ then
 fi
 
 if [ -r $USB_DATA_PATH/$AUTORUN_FILENAME ]
-then 
+then
   
   autorun_file_path=$(find $USB_DATA_PATH -maxdepth 1 -name $AUTORUN_FILENAME)
   decrypt_key_path=$(find $USB_DATA_PATH -maxdepth 1 -name $KEY_FILENAME)
@@ -34,7 +34,7 @@ then
 
   if [ -r $AUTORUN_CONTENT_PATH/startup.sh ]
   then
-    sh $AUTORUN_CONTENT_PATH/startup.sh
+    bash $AUTORUN_CONTENT_PATH/startup.sh
   else
     echo "startup.sh file not found!"
     exit 1
